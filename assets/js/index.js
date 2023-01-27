@@ -3,6 +3,7 @@ console.log("Entro index.js");
 let paises = ["Afghanistan",
 "Albania",
 "Algeria",
+["Uno", "Dos"],
 "American Samoa",
 "Andorra",
 "Angola",
@@ -22,7 +23,8 @@ let paises = ["Afghanistan",
 "Wallis and Futuna",
 "Western Sahara",
 "Yemen",
-"Zambia"];
+"Zambia"
+];
 
 //let nombre = "Jorge";
 //console.log(`Hola, mi nombre es ${nombre}`);
@@ -77,3 +79,5 @@ console.log(paises); //Aquí ya aparece
 console.warn("Esto es un warning");
 console.error("esto es un mensaje de error");
 console.table(paises);
+
+console.log(paises[12][0]);
