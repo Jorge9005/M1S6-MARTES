@@ -1,7 +1,7 @@
-let paises2 = ["Afghanistan",
+let paises2 = [
+"Afghanistan",
 "Albania",
 "Algeria",
-["Uno", "Dos"],
 "American Samoa",
 "Andorra",
 "Angola",
@@ -34,4 +34,42 @@ for (let index = 0; index < paises2.length; index++) {
 
 paises2.forEach(pais => { //las variables de arriba no impactan en este for each
     console.log(pais); //porque es como si usaramos void, se declaran las variables solo para esos void
+});
+
+//for y for each no modifica el arreglo original
+
+//.map crea un nuevo arreglo
+
+let nuevoArreglo = paises2.map(pais => {
+    console.log(pais);
+    return pais.toUpperCase(); /*Si estamos con un arreglo dentro de otro arrelgo
+    nos dará error al colocar toUpperCase o cualquiera de estas funciones,
+    mandará un mensaje diciendo que toUpperCase() no es una función. Para resolverlo solo hay que eliminar
+    el arreglo que está dentro del otro arreglo. */
+});
+
+console.log("nuevoArreglo: ", nuevoArreglo); //este es el nuevo arreglo que imprime .map
+console.log("paises2", paises); //este es el arreglo original
+
+let edades = [18, 19, 25, 35, 40, 55, 34, 14, 17];
+
+let nuevoArregloEdades = edades.map(edad => {
+    if(edad >= 18){
+        return edad + 1;
+    }
+    else{
+        return edad;
+    }
+}); //Lo que hace este arreglo es agregar +1 a los valores que son mayores a 18.
+
+console.log(edades);
+console.log(nuevoArregloEdades);
+
+let mayoriaEdad = edades.filter(edad => {
+    if(edad >= 18){
+        return edad;
+    }
+    else{
+        return edad;
+    }
 });
